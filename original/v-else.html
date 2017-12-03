@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>v-if</title>
+</head>
+<body>
+	<div id="app">
+        <h1 v-if="yes">Yes!</h1>
+        <h1 v-if="no">No!</h1>
+        <h1 v-if="age >= 25">Age >= 25</h1>
+        <h1 v-else>Age < 25</h1>
+        <h1 v-if="name.indexOf('jack') >= 0">Name: {{ name }}</h1>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+    // 这是我们的Model
+    var exampleData = {
+        yes: true,
+        no: false,
+        age: 28,
+        name: 'keepfool'
+    }
+
+    // 创建一个 Vue 实例或 "ViewModel"
+    // 它连接 View 与 Model
+    new Vue({
+        el: '#app',
+        data: exampleData
+    })
+</script>
+</html>
